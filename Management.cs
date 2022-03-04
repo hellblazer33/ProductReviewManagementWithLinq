@@ -62,6 +62,20 @@ namespace ProductReviewManagementWithLinq
             }
 
         }
+        
+          public void SkipTopRecords(List<ProductReview> listProductReview)
+        {
+            var recordedData = (from productReviews in listProductReview
+                                orderby productReviews.Rating descending
+                                select productReviews).Skip(5);
+
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID:- " + list.ProducID + " " + "UserID:- " + list.UserID
+                    + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "isLike:- " + list.isLike);
+            }
+
+        }
 
 
     }
