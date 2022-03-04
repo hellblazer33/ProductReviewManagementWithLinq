@@ -49,6 +49,19 @@ namespace ProductReviewManagementWithLinq
 
             }
         }
+            public void ProductIDandReviews(List<ProductReview> listProductReview)
+        {
+            var recordedData = (from productReviews in listProductReview
+                                orderby productReviews.ProducID descending
+                                select productReviews);
+            Console.WriteLine(recordedData);
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID:- " + list.ProducID + " " + "UserID:- " + list.UserID
+                    + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "isLike:- " + list.isLike);
+            }
+
+        }
 
 
     }
