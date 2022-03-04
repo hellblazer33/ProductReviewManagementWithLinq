@@ -49,7 +49,7 @@ namespace ProductReviewManagementWithLinq
 
             }
         }
-            public void ProductIDandReviews(List<ProductReview> listProductReview)
+            public void ProductID(List<ProductReview> listProductReview)
         {
             var recordedData = (from productReviews in listProductReview
                                 orderby productReviews.ProducID descending
