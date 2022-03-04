@@ -34,5 +34,9 @@ management.SelectedRecords(productReviewList);
 
 //UC4
 management.RetrieveCountOfRecords(productReviewList);
-Console.ReadKey();
 
+
+//UC5
+management.ProductIDandReviews(productReviewList);
+
+Console.ReadKey();
