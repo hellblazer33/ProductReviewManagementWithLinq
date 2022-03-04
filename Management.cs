@@ -76,6 +76,20 @@ namespace ProductReviewManagementWithLinq
             }
 
         }
+        
+         public void ProductIDandProductReviews(List<ProductReview> listProductReview)
+        {
+            var recordedData = (from productReviews in listProductReview
+                                where (productReviews.ProducID > 0) && (productReviews.Review!=" ")
+                                select productReviews);
+
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID:- " + list.ProducID + " " + "UserID:- " + list.UserID
+                    + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "isLike:- " + list.isLike);
+            }
+
+        }
 
 
     }
