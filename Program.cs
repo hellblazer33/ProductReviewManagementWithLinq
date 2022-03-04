@@ -42,5 +42,8 @@ management.ProductIDandReviews(productReviewList);
 //UC6
 management.SkipTopRecords(productReviewList);
 
+//UC7
+
+management.ProductIDandProductReviews(productReviewList)
 
 Console.ReadKey();
